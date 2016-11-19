@@ -5,6 +5,6 @@
 
   function RefereesAndDelegatesController() {
     var refereesAndDelegates = this;
-    refereesAndDelegates.msg = 'from Referees and Delegates';
+    refereesAndDelegates.msg = ' from Referees and Delegates';
   }
 })();

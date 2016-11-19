@@ -44,10 +44,10 @@
         templateUrl: 'app/venues/venues.template.html',
         controller: 'VenuesController as venues'
       })
-      .state('home.refereesAndDelegates', {
+      .state('home.referees&Delegates', {
         url: 'referees-and-delegates',
         templateUrl: 'app/referees-and-delegates/referees-and-delegates.template.html',
-        controller: 'RefereesAndDelegates as refereesAndDelegates'
+        controller: 'RefereesAndDelegatesController as refereesAndDelegates'
       });
   }
 })();

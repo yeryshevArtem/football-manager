@@ -10,8 +10,18 @@
         logo: '<'
       }
     });
+    
     function HeaderController() {
       var header = this;
-      header.menuItems = ['Structure', 'Season', 'Competitions', 'Teams', 'Team Members', 'Payments', 'Venues', 'Referees and Delegates'];
+      header.menuItems = [
+        'Structure',
+        'Season',
+        'Competitions',
+        'Teams',
+        'Team Members',
+        'Payments',
+        'Venues',
+        'Referees & Delegates'
+      ];
     }
 })();

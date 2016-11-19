@@ -1,4 +1,4 @@
 (function () {
   'use strict';
-  angular.module('refereesAndDelegates');
+  angular.module('refereesAndDelegates', []);
 })();
