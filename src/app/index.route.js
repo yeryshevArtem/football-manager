@@ -34,6 +34,11 @@
         templateUrl: 'app/teams/teams.template.html',
         controller: 'TeamsController as teams'
       })
+      .state('home.teamMembers', {
+        url: 'team-members',
+        templateUrl: 'app/team-members/team-members.template.html',
+        controller: 'TeamMembersController as teamMembers'
+      })
       .state('home.payments', {
         url: 'payments',
         templateUrl: 'app/payments/payments.template.html',

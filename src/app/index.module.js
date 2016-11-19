@@ -6,6 +6,7 @@
     'season',
     'competitions',
     'teams',
+    'teamMembers',
     'payments',
     'venues',
     'refereesAndDelegates',

@@ -1,1 +1,95 @@
-<h2>Hello{{ structure.msg }}</h2>
+<section>
+  <div class="container">
+    <h1>Creating league structure</h1>
+    <form data-state="league-create">
+      <div class="form-group">
+        <label for="rules">Choose between</label>
+        <select id="rules" class="form-control">
+          <option>Classic</option>
+          <option>Cut system</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="teams">Please, type name of team</label>
+        <input id="teams" type="text" class="form-control" placeholder="Teams">
+      </div>
+      <div class="form-group">
+        <label for="pitches">Please, type the pitches</label>
+        <input
+          id="pitches"
+          type="number"
+          class="form-control"
+          placeholder="Pitches"
+          min="2"
+          max="10"
+          step="2">
+      </div>
+      <div class="form-group">
+        <label for="lengthInHours">Please, select length of game in hours</label>
+        <select id="lengthInHours" class="form-control">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="lengthInMin">Please, select length of game in minutes</label>
+        <select id="lengthInMin" class="form-control">
+          <option>5</option>
+          <option>10</option>
+          <option>15</option>
+          <option>20</option>
+          <option>25</option>
+          <option>30</option>
+          <option>35</option>
+          <option>40</option>
+          <option>45</option>
+          <option>50</option>
+          <option>55</option>
+        </select>
+      </div>
+      <h5>Please, type the available time slots</h5>
+      <div class="form-group">
+        <label for="startTime">From</label>
+        <input
+          id="startTime"
+          type="time"
+          class="form-control"
+          placeholder="9:00AM">
+      </div>
+      <div class="form-group">
+        <label for="endTime">to</label>
+        <input
+          id="endTime"
+          type="time"
+          class="form-control"
+          placeholder="15:00AM">
+      </div>
+      <div class="form-group">
+        <label for="age">Please, select the age</label>
+        <input
+          id="age"
+          type="number"
+          class="form-control"
+          placeholder="Age"
+          min="7"
+          max="200"
+          step="1">
+      </div>
+      <div class="form-group">
+        <label for="gender">Please, select the gender</label>
+        <select id="gender" class="form-control">
+          <option>male</option>
+          <option>female</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="leagueName">Please, type the League Name (For example: "Spring League Seniors")</label>
+        <input type="text" id="leagueName" class="form-control" placeholder="League name">
+      </div>
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+  </div>
+</section>
