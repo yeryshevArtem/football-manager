@@ -3,53 +3,64 @@
     <h1>Creating league structure</h1>
     <form data-state="league-create">
       <div class="form-group">
-        <label for="rules">Choose between</label>
-        <select id="rules" class="form-control">
-          <option>Classic</option>
-          <option>Cut system</option>
+        <label for="rules">{{structure.fields.rules.label}}</label>
+        <select id="rules" class="form-control" ng-model="structure.fields.rules.ruleValue">
+          <option ng-repeat="rulesOption in structure.fields.rules.options" value="{{rulesOption}}">{{rulesOption}}</option>
         </select>
+        <p ng-show="structure.fields.rules.ruleValue">Your choice is {{structure.fields.rules.ruleValue}}</p>
       </div>
       <div class="form-group">
-        <label for="teams">Please, type name of team</label>
-        <input id="teams" type="text" class="form-control" placeholder="Teams">
+        <label for="teams">{{structure.fields.teams.label}}</label>
+        <input
+          id="teams"
+          type="text"
+          class="form-control"
+          placeholder="Teams"
+          ng-model="structure.fields.teams.teamValue">
+        <p ng-show="structure.fields.teams.teamValue">Team name: {{structure.fields.teams.teamValue}}</p>
       </div>
       <div class="form-group">
-        <label for="pitches">Please, type the pitches</label>
+        <label for="pitches">{{structure.fields.pitches.label}}</label>
         <input
           id="pitches"
           type="number"
           class="form-control"
           placeholder="Pitches"
-          min="2"
-          max="10"
-          step="2">
+          min="{{structure.fields.pitches.minNumberOfPitches}}"
+          max="{{structure.fields.pitches.maxNumberOfPitches}}"
+          step="{{structure.fields.pitches.step}}"
+          ng-model="structure.fields.pitches.pitchValue">
+        <p ng-show="structure.fields.pitches.pitchValue">Pitches type: {{structure.fields.pitches.pitchValue}}</p>
       </div>
       <div class="form-group">
-        <label for="lengthInHours">Please, select length of game in hours</label>
-        <select id="lengthInHours" class="form-control">
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
+        <label for="lengthInHours">{{structure.fields.timeLength.lengthInHours.label}}</label>
+        <select
+          id="lengthInHours"
+          class="form-control"
+          ng-model="structure.fields.timeLength.lengthInHours.timeLengthHoursValue">
+          <option
+            ng-repeat="timeOption in structure.fields.timeLength.lengthInHours.timeLength"
+            value="{{timeOption}}">
+            {{timeOption}}
+          </option>
         </select>
       </div>
       <div class="form-group">
-        <label for="lengthInMin">Please, select length of game in minutes</label>
-        <select id="lengthInMin" class="form-control">
-          <option>5</option>
-          <option>10</option>
-          <option>15</option>
-          <option>20</option>
-          <option>25</option>
-          <option>30</option>
-          <option>35</option>
-          <option>40</option>
-          <option>45</option>
-          <option>50</option>
-          <option>55</option>
+        <label for="lengthInMin">{{structure.fields.timeLength.lengthInMinutes.label}}</label>
+        <select
+          id="lengthInMin"
+          class="form-control"
+          ng-model="structure.fields.timeLength.lengthInHours.timeLengthMinutesValue">
+          <option
+            ng-repeat="timeOption in structure.fields.timeLength.lengthInMinutes.timeLength"
+            value="{{timeOption}}">{{timeOption}}</option>
         </select>
       </div>
+      <p ng-show="structure.fields.timeLength.lengthInHours.timeLengthHoursValue
+        && structure.fields.timeLength.lengthInHours.timeLengthMinutesValue">Game length:
+        {{structure.fields.timeLength.lengthInHours.timeLengthHoursValue}} hours:
+        {{structure.fields.timeLength.lengthInHours.timeLengthMinutesValue}} minutes
+      </p>
       <h5>Please, type the available time slots</h5>
       <div class="form-group">
         <label for="startTime">From</label>
